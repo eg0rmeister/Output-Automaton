@@ -33,3 +33,7 @@
 
 # User-defined
 Makefile
+.vscode
+CMakeFiles
+cmake_install.cmake
+CMakeCache.txt
