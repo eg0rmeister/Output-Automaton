@@ -6,7 +6,7 @@ class Automaton{
  public:
   /// @brief Constructor with all varriables starting at zero
   /// @param amount_of_variables Total amount of variables
-  Automaton(size_t amount_of_variables);
+  Automaton(size_t amount_of_variables = 0);
 
   /// @brief Constructor
   /// @param starting_values Starting state of automaton
