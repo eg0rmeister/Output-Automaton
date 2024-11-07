@@ -12,12 +12,30 @@ Automaton::Automaton(std::vector<bool>&& starting_values){
   state = std::move(starting_values);
 }
 
-bool Automaton::ApplyRules(){
+bool Automaton::ApplyAllRules(){
   bool changed = false;
   for(const auto& rule : rules){
     changed = ApplyRule(rule) || changed;
   }
   return changed;
+}
+
+char Automaton::ApplyFirstRule()
+{
+  bool changed;
+  bool rule_applied;
+  for(const auto& rule : rules){
+    rule_applied = CheckCondition(rule.condition_indices);
+    if(!rule_applied) {
+      continue;
+    }
+    changed = ApplyRule(rule);
+    if(changed) {
+      return 0; // Rule was applied and a change occured
+    }
+    return 1; // Rule was applied but no change occured
+  }
+  return 2; // No rule applied
 }
 
 std::vector<bool> Automaton::GetState() const {

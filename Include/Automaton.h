@@ -16,9 +16,15 @@ class Automaton{
   /// @param starting_values Starting state of automaton
   Automaton(std::vector<bool>&& starting_values);
 
-  /// @brief Changes the state of the automaton according to the rules
+  /// @brief Changes the state of the automaton according to all the rules
   /// @return True if changes did happen
-  bool ApplyRules();
+  bool ApplyAllRules();
+
+  /// @brief Changes the state of the automaton according to the first matching rule
+  /// @return 0 if a rule was applied and a change happened,
+  /// 1 if rule was applied but no changes happened,
+  /// 2 if no rule was applied
+  char ApplyFirstRule();
   
   /// @brief Adds a rule to the ruleset
   /// @param condition_indices The condition of the rule being applied
