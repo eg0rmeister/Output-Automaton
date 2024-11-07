@@ -5,4 +5,4 @@ set(SOURCES Sources)
 
 include_directories(Include)
 
-add_executable(a.out main.cpp ${SOURCES}/Automaton.cpp)
+add_executable(a.out main.cpp ${SOURCES}/Automaton.cpp ${SOURCES}/UserInput.cpp)
