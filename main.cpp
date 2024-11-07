@@ -33,7 +33,7 @@ Automaton InputAutomaton();
 
 
 int main(){
-  Automaton automaton = std::move(InputAutomaton());
+  Automaton automaton = InputAutomaton();
 
   do {
     std::cout << automaton << std::endl;
