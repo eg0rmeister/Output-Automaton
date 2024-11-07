@@ -37,7 +37,7 @@ int main(){
 
   do {
     std::cout << automaton << std::endl;
-  } while (automaton.ApplyRules());
+  } while (automaton.ApplyAllRules());
   return 0;
 }
 
