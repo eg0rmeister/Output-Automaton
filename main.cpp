@@ -1,12 +1,15 @@
 #include <Automaton.h>
 #include <UserInput.h>
+#include <FileInput.h>
 #include <string>
+#include <fstream>
 
 int main(){
-  Automaton automaton = UserInput::InputAutomaton();
+  std::ifstream file("in.out");
+  Automaton automaton = FileInput::InputAutomaton(file);
 
   do {
     std::cout << automaton << std::endl;
-  } while (automaton.ApplyFirstRule() == 0);
+  } while (automaton.ApplyAllRules());
   return 0;
 }
