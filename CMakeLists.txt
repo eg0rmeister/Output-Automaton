@@ -11,4 +11,4 @@ link_libraries(AutomatonAndInputs)
 
 add_subdirectory(Tests Tests)
 
-add_executable(a.out main.cpp)
+add_executable(main.out main.cpp)
