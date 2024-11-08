@@ -4,5 +4,7 @@ project(output-automaton)
 set(SOURCES Sources)
 
 include_directories(Include)
+add_subdirectory(${SOURCES} SourceDirectory)
+link_libraries(AutomatonAndInputs)
 
-add_executable(a.out main.cpp ${SOURCES}/Automaton.cpp ${SOURCES}/UserInput.cpp ${SOURCES}/GeneralInput.cpp)
+add_executable(a.out main.cpp)
