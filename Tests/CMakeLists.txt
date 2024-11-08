@@ -1,0 +1,10 @@
+set (EXECUTABLE_OUTPUT_PATH "executables")
+add_executable(test_file_input test_file_input.cpp)
+add_executable(test_apply_first test_apply_first.cpp)
+add_executable(test_apply_all test_apply_all.cpp)
+add_executable(test_cycle test_cycle.cpp)
+
+add_test(NAME TestFileInput COMMAND test_file_input)
+add_test(NAME TestApplyFirst COMMAND test_apply_first)
+add_test(NAME TestApplyAll COMMAND test_apply_all)
+add_test(NAME TestCycle COMMAND test_cycle)
