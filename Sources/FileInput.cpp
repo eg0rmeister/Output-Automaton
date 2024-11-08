@@ -53,6 +53,5 @@ std::vector<size_t> FileInput::InitializeRulePart(std::ifstream& file)
   for(auto& element : indices) {
     file >> element;
   }
-  std::cout << std::endl;
   return indices;
 }
