@@ -11,18 +11,8 @@ Automaton UserInput::InitializeAutomaton(){
   size_t number_of_variables;
   std::cout << "Enter number of variables of the automaton: ";
   std::cin >> number_of_variables;
-
-  char answer;
-  std::cout << "Are you going to define starting state? (Y/N): ";
-  std::cin >> answer;
-  std::cout << std::endl;
   
-  Automaton automaton;
-  if (answer == 'Y' || answer == 'y'){
-    automaton = Automaton(GetStartingState(number_of_variables));
-  } else if (answer == 'N' || answer == 'n'){
-    automaton = Automaton(number_of_variables);
-  }
+  Automaton automaton = Automaton(GetStartingState(number_of_variables));
   std::cout << std::endl;
   return automaton;
 }
